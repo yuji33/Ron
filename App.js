@@ -2,15 +2,18 @@ import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
 
 export default function App() {
   return (
-    <NavigationContainer>
-      <View style={styles.container}>
-       <Text>文字変えたよ</Text>
-       <StatusBar style="auto" />
-      </View>
-    </NavigationContainer>
+    <SafeAreaProvider>
+       <NavigationContainer>
+        <View style={styles.container}>
+         <Text>プログラミング</Text>
+         <StatusBar style="auto" />
+        </View>
+       </NavigationContainer>
+    </SafeAreaProvider>
   );
 }
 
