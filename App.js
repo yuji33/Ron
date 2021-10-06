@@ -4,6 +4,7 @@ import { StyleSheet, Text, View } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import CategoryList from './src/CategoryList';
 const Tab = createBottomTabNavigator();
 
 export default function App() {
@@ -11,7 +12,7 @@ export default function App() {
     <SafeAreaProvider>
        <NavigationContainer>
         <Tab.Navigator>
-         <Tab.Screen name="Home" component={HomeScreen} />
+         <Tab.Screen name="カテゴリー" component={CategoryList} />
          <Tab.Screen name="Settings" component={SettingsScreen} />
         </Tab.Navigator>
         {/* <View style={styles.container}> */}
