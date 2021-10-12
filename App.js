@@ -5,16 +5,18 @@ import { NavigationContainer } from '@react-navigation/native';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import CategoryList from './src/CategoryList';
-const Tab = createBottomTabNavigator();
+import { Header } from 'react-native-elements';
 
 export default function App() {
   return (
     <SafeAreaProvider>
+      <Header
+  　　　　leftComponent={{ icon: 'menu', color: '#fff', iconStyle: { color: '#fff' } }}
+ 　　　　 centerComponent={{ text: 'MY TITLE', style: { color: '#fff' } }}
+  　　　　rightComponent={{ icon: 'home', color: '#fff' }}
+　　　　/>
        <NavigationContainer>
-        <Tab.Navigator>
-         <Tab.Screen name="カテゴリー" component={CategoryList} />
-         <Tab.Screen name="Settings" component={SettingsScreen} />
-        </Tab.Navigator>
+        <CategoryList/>
         {/* <View style={styles.container}> */}
          {/* <Text>プログラミング</Text> */}
          {/* <StatusBar style="auto" /> */}
